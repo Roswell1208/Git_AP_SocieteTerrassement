@@ -1,0 +1,102 @@
+/* Pour le titre */
+section
+{
+  /*bottom:500px;*/
+  background-color:  rgb(255, 255, 255);
+}
+.titre{
+    font-family: Courier New, monospace;
+    text-align: center;
+    color : rgb(24, 23, 21);
+    font-size: 350%;
+    margin-top: 50px;
+    margin-bottom: 55px;
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+  
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+
+/* Div générique */
+
+body
+{
+  background-color:  rgb(155, 153, 153);
+}
+.position_base{
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Pour les images */
+
+#conteneur img {
+	position:absolute;
+  height:400px;
+	width:500px;
+  left:125px;
+  top: 100px;
+}
+
+@keyframes fondu-in-out {
+	0%    { opacity:1; }
+	25%   { opacity:1; }
+	75%   { opacity:0; }
+	100%  { opacity:0; }
+}
+
+#conteneur img.image-de-dessus {
+	animation-name: fondu-in-out;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+	animation-direction: alternate;
+}
+
+/* Pour le texte */
+
+.bio_acc{
+  position:absolute;
+  font-family: serif;
+  font-size: 1.5em;
+  left: 50%;
+  top: 250px;
+}
+#conteneur2 img {
+	position:absolute;
+  height:400px;
+	width:500px;
+  left:900px;
+  top: 750px;
+}
+
+#conteneur2 img.image-de-dessus {
+	animation-name: fondu-in-out;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+	animation-direction: alternate;
+}
+
+.bio_acc2{
+  position:absolute;
+  font-family: serif;
+  font-size: 1.5em;
+  left: 50px;
+  top: 900px;
+}
+
+/*.btn {
+  background-color: black;
+  margin-left: 50%;
+}*/

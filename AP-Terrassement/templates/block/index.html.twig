@@ -1,7 +1,34 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Terrassement{% endblock %}
+{% block title %}Accueil{% endblock %} {#Nom de l'onglet du site#}
 
+{% block section %} <div class = "titre">Bienvenue chez TerraBat</div> {% endblock %}
 {% block body %}
+
+<link href="css/accueil.css" rel="stylesheet">
+
+
+<div class ='position_base'>
+
+    <div id='conteneur'>
+        <img src="assets/maison.png">
+        <img class='image-de-dessus' src="assets/piscine.png">
+    </div>
+
+    <div class='bio_acc'>
+        <p>Entreprise familliale, fondé et présidé par Thierry Lorein. </p>
+        <p>Vous pouvez nous retrouver à Vernon ou encore à Mantes-La-Jolie<p>
+    </div>
+    <div id='conteneur2'>
+        <img src="assets/maison.png">
+        <img class='image-de-dessus' src="assets/piscine.png">
+    </div>
+    <div class='bio_acc2'>
+        <p>Entreprise familliale, fondé et présidé par Thierry Lorein. </p>
+        <p>Vous pouvez nous retrouver à Vernon ou encore à Mantes-La-Jolie<p>
+    </div>
+</div>
+{#<button class="btn">Présentation</button>#}
+
 
 {% endblock %}
