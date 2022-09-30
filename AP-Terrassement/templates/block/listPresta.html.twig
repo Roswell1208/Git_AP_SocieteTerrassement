@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terrassement{% endblock %}
+
+{% block body %}
+
+    <link href="css/stylePrestaTest.css" rel="stylesheet">
+
+    {% set compteur = 0 %}
+
+    <table>
+        {% for unePresta in prestas %}
+            {% set compteur = compteur + 1 %}
+            {% if compteur % 4 == 0 %}
+                <tr></tr>
+                {% set compteur = 1 %}
+            {% endif %}
+
+            <td>
+                <article class="card">
+                    <header class="card__thumb">
+                        <a href="{{ path('detailsPresta', {id: unePresta.id}) }}">
+                        <img src={{unePresta.lienImg}}>
+                        </a>
+                    </header>
+                    <div class="card__body">
+                        <h2 class="card__title"><a href="{{ path('detailsPresta', {id: unePresta.id}) }}">{{unePresta.titre}}</a></h2>
+                    </div>
+                    <footer class="card__footer">
+                        {{unePresta.tarif}} €/m2
+                    </footer>
+                </article>
+            </td>
+            
+        {% endfor %}
+    </table>
+
+{% endblock %}
