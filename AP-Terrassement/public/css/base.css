@@ -1,3 +1,13 @@
+.detailPrestaBody{
+    display: block;
+
+    text-align: center;
+    margin-top: 50px;
+
+    margin-left: 350px;
+    margin-right: 350px;
+}
+
 .nav-link_ic{
     color : white !important; /*Onglet de connexion et d'inscription en blanc*/
     font-size: 115%; /*Modification de la taille de l'onglet de connexion et d'inscription*/
@@ -35,7 +45,7 @@
 body{
     background: #fcfcfc;
 }
-footer{
+/*footer{
     display : table-row;
     position: absolute;
     bottom: 0;
@@ -47,7 +57,7 @@ footer{
     font-family: "Open Sans";
     padding-top: 40px;
     color: #fff;
-}
+}*/
 
 .footer-content{
     display: flex;
