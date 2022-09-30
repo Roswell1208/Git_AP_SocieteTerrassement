@@ -68,6 +68,16 @@ class BlockController extends AbstractController
             'controller_name' => 'BlockController',
         ]);
     }
+
+    /**
+     * @Route("Inscription", name="Inscription")
+     */
+    public function Inscription(): Response
+    {
+        return $this->render('block/Inscription.html.twig', [
+            'controller_name' => 'BlockController',
+        ]);
+    }
 }
 
 ?>

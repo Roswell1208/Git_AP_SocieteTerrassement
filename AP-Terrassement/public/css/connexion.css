@@ -19,6 +19,14 @@ body{
     margin:0 auto;
     margin-top:10%;
 }
+
+#container2{
+    width:100%;
+    margin:0 auto;
+    margin-top:5%;
+    margin-bottom: 5%;
+}
+
 /* Bordered form */
 form {
     width:40%;
@@ -31,7 +39,14 @@ form {
 #container h1{
     margin-left: auto;
     margin-right: auto;
-    width: 38%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#container2 h1{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     /*margin: 0 auto;*/
     padding-bottom: 10px;
 }

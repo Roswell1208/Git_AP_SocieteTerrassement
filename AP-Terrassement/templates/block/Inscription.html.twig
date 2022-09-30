@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+{% block body %}
+<link href="css/connexion.css" rel="stylesheet">
+
+{#<div class ='position_base'>
+    <div id='conteneur'>
+        <img src="assets/Logo.png">
+    </div>
+</div>#}
+
+
+<div id="container2">
+    <!-- zone de connexion -->
+    <form>
+        <h1>Créer un compte</h1>        
+        <label><b>Nom</b></label>
+        <input type="text" placeholder="Entrez votre nom" name="nom" required>
+
+        <label><b>Prénom</b></label>
+        <input type="text" placeholder="Entrez votre prénom" name="prenom" required>
+
+        <label><b>Adresse mail</b></label>
+        <input type="text" placeholder="Entrez votre adresse mail" name="mail" required>
+
+        <label><b>Mot de passe</b></label>
+        <input type="password" placeholder="Entrez un mot de passe (Min. 12 caractères)" name="password" required>
+
+        <label><b>Confirmer le mot de passe</b></label>
+        <input type="password" placeholder="Entrez un mot de passe (Min. 12 caractères)" name="confirmPassword" required>
+
+        <input type="submit" id='submit' value='VALIDER' >
+        {#<?php
+            if(isset($_GET['erreur'])){
+                $err = $_GET['erreur'];
+                if($err==1 || $err==2)
+                    echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+            }
+        ?>#}
+    </form>
+</div>
+
+{#<div class="form-group">
+    <label for="exampleInputEmail1" class="form-label mt-4">Adresse mail</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ex : email@example.com">
+    <small id="emailHelp" class="form-text text-muted">Avec TerraBat vos données seront préservés.</small>
+</div>
+<div class="form-group">
+    <label for="exampleInputPassword1" class="form-label mt-4">Mot de passe</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
+</div>#}
+
+{% endblock %}
