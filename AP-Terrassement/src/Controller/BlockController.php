@@ -48,6 +48,26 @@ class BlockController extends AbstractController
             'prestas' => $prestas
         ]);
     }
+
+        /**
+     * @Route("Contact", name="Contact")
+     */
+    public function Contact(): Response
+    {
+        return $this->render('block/Contact.html.twig', [
+            'controller_name' => 'BlockController',
+        ]);
+    }
+
+    /**
+     * @Route("Connexion", name="Connexion")
+     */
+    public function Connexion(): Response
+    {
+        return $this->render('block/Connexion.html.twig', [
+            'controller_name' => 'BlockController',
+        ]);
+    }
 }
 
 ?>

@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terrassement{% endblock %}
+
+{% block body %}
+
+    {% for unePresta in prestas %}
+        
+        {% if id == unePresta.id %}
+
+            <div class="detailPrestaBody">
+                <h1>{{unePresta.titre}}</h1>
+
+                <p>{{unePresta.getDescriPresta()}}</p>
+                <p>{{unePresta.getTarif()}} €/m2</p>
+
+                <img src="../{{unePresta.lienImg}}">
+
+            </div>
+
+        {% endif %}
+
+    {% endfor %}
+
+{% endblock %}
+
+
