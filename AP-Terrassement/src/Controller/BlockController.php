@@ -7,6 +7,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+use App\Entity\User;
+use App\Form\AddUserType;
+use Symfony\Component\HttpFoundation\Request;
+use Doctrine\ORM\EntityManagerInterface;
+
+
 class BlockController extends AbstractController
 {
     /**
@@ -72,10 +78,21 @@ class BlockController extends AbstractController
     /**
      * @Route("Inscription", name="Inscription")
      */
-    public function Inscription(): Response
+    public function Inscription(Request $request, EntityManagerInterface $entityManager): Response
     {
+        $user = new User();
+
+        $form = $this->createForm(AddUserType::class, $user);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()){
+            $entityManager->persist($user);
+            $entityManager->flush();
+        }
+
         return $this->render('block/Inscription.html.twig', [
             'controller_name' => 'BlockController',
+            'form' => $form->createView()
         ]);
     }
 }
