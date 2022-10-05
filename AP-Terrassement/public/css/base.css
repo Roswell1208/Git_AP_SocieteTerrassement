@@ -9,16 +9,23 @@
 }
 
 .nav-link_ic{
-    color : white !important; /*Onglet de connexion et d'inscription en blanc*/
+    color : rgb(92, 9, 9); /*Onglet de connexion et d'inscription en blanc*/
     font-size: 115%; /*Modification de la taille de l'onglet de connexion et d'inscription*/
 }
 
 .nav-link{
     font-size: 115%; /*Modification de la taille des autres onglets*/
+    color : rgb(92, 9, 9);
 }
 
+.nav-item{
+    font-size: 115%; /*Modification de la taille des autres onglets*/
+    color : rgb(92, 9, 9);
+}
+
+
 .nav-link:hover{
-    color : yellow !important; /*Onglet devient jaune lorsque le curseur pointe l'onglet*/
+    color : black !important; /*Onglet devient jaune lorsque le curseur pointe l'onglet*/
     font-size: 150%; /*Modification de la taille des autres onglet lorsque le curseur pointe sur l'onglet */
 }
 
@@ -28,6 +35,7 @@
 
 .navbar-brand{
     font-size:200%;  /*Modification de la taille du nom mis sur la navbarre */
+    color : rgb(92, 9, 9);
 }
 
 /*.navbar-brand img{

@@ -12,7 +12,7 @@
 }*/
 
 body{
-    background: #868686;
+    background: rgb(5, 61, 12);
 }
 #container{
     width:100%;
@@ -47,7 +47,7 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 input[type=submit] {
-    background-color: #868686;
+    background-color: rgb(5, 61, 12);
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
