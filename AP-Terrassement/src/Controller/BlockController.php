@@ -21,8 +21,12 @@ class BlockController extends AbstractController
      */
     public function index(): Response
     {
+        $repoAvis = $this->getDoctrine()->getRepository(Avis::class);
+        $avis = $repoAvis->findAll();
+
         return $this->render('block/index.html.twig', [
             'controller_name' => 'BlockController',
+            'listeAvis' => $avis
         ]);
     }
 

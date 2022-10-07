@@ -27,8 +27,47 @@
         <p>Entreprise familliale, fondé et présidé par Thierry Lorein. </p>
         <p>Vous pouvez nous retrouver à Vernon ou encore à Mantes-La-Jolie<p>
     </div>
+
+    <div class='ListeDerniersAvis'>
+        <h1>Avis :</h1>
+
+
+        
+        {% for unAvis in listeAvis %}
+
+            {% set date = unAvis.getDate().format('Y-m-d') %}
+            {% set heure = unAvis.getDate().format('h:i:s') %}
+
+                <table>
+                    <tr>
+                        <td>
+                            <div class='date'>Le {{ date }} à {{ heure}}</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class='auteur'>Ecrit par {{ unAvis.prenom }} {{ unAvis.nom }} :</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class='descri'>{{ unAvis.getDescriAvis()}}</div>
+                        </td>
+                    </tr>
+                </table>
+                </br>
+
+            
+        {% endfor %}
+
+
+    </div>
 </div>
 {#<button class="btn">Présentation</button>#}
+
+
 
 
 {% endblock %}

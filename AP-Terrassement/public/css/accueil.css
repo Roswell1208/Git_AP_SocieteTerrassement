@@ -100,3 +100,28 @@ body
   background-color: black;
   margin-left: 50%;
 }*/
+
+
+.ListeDerniersAvis{
+  position:absolute;
+  font-family: serif;
+  font-size: 1.5em;
+  text-align: left;
+  top: 1200px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+
+.ListeDerniersAvis table{
+  
+  border: 1px solid;
+}
+
+.date{
+  font-style: italic;
+}
+
+.auteur{
+  color: black;
+  text-decoration: underline;
+}
