@@ -17,7 +17,6 @@ class AddUserType extends AbstractType
             ->add('prenom')
             ->add('adresse_mail')
             ->add('mdp', PasswordType::class)
-            ->add('statut')
         ;
     }
 

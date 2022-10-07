@@ -86,6 +86,7 @@ class BlockController extends AbstractController
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()){
+            $user -> setStatut(1);
             $entityManager->persist($user);
             $entityManager->flush();
         }
