@@ -23,10 +23,19 @@ class Avis
     private $descri_avis;
 
     /**
-     * @ORM\ManyToOne(targetEntity=User::class)
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\Column(type="string", length=255)
      */
-    private $user_id;
+    private $nom;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $prenom;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $date;
 
     public function getId(): ?int
     {
@@ -45,14 +54,38 @@ class Avis
         return $this;
     }
 
-    public function getUserId(): ?user
+    public function getNom(): ?string
     {
-        return $this->user_id;
+        return $this->nom;
     }
 
-    public function setUserId(?user $user_id): self
+    public function setNom(string $nom): self
     {
-        $this->user_id = $user_id;
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    public function getPrenom(): ?string
+    {
+        return $this->prenom;
+    }
+
+    public function setPrenom(string $prenom): self
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    public function getDate(): ?\DateTimeInterface
+    {
+        return $this->date;
+    }
+
+    public function setDate(\DateTimeInterface $date): self
+    {
+        $this->date = $date;
 
         return $this;
     }
