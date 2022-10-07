@@ -2,12 +2,13 @@
 section
 {
   /*bottom:500px;*/
-  background-color:  rgb(5, 61, 12);
+  /*background-color:  rgb(5, 61, 12);*/
+  background-color:  rgb(255, 255, 255);
 }
 .titre{
     font-family: Courier New, monospace;
     text-align: center;
-    color : whitesmoke;
+    color : rgb(48, 40, 40);
     font-size: 350%;
     margin-top: 50px;
     margin-bottom: 55px;
@@ -31,7 +32,7 @@ section
 
 body
 {
-  background-color:  rgb(5, 61, 12);
+  background-color:  rgb(255, 255, 255);
 }
 .position_base{
   margin: 0 auto;
@@ -76,10 +77,10 @@ body
   top: 250px;
 }
 
-.fond_beton{
+#fond_beton{
   position:absolute;
   left: 50%;
-  height:100px;
+  height:300px;
 	width:900px;
   top: 100px;
 }

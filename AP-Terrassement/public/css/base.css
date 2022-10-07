@@ -8,41 +8,43 @@
     margin-right: 350px;
 }
 
+.nav-item{
+    font-size: 115%; /*Modification de la taille des autres onglets*/
+    color:black;
+}
+
 .nav-link_ic{
-    color : rgb(92, 9, 9); /*Onglet de connexion et d'inscription en blanc*/
+    /*color : rgb(92, 9, 9);*/ /*Onglet de connexion et d'inscription en blanc*/
+    color: white;
     font-size: 115%; /*Modification de la taille de l'onglet de connexion et d'inscription*/
 }
 
+.nav-link_ic:hover{
+    /*color : rgb(92, 9, 9);*/ /*Onglet de connexion et d'inscription en blanc*/
+    color: white;
+    font-size: 130%; /*Modification de la taille de l'onglet de connexion et d'inscription*/
+}
+
+
 .nav-link{
     font-size: 115%; /*Modification de la taille des autres onglets*/
-    color : rgb(92, 9, 9);
+    color:rgb(188, 187, 187);
 }
-
-.nav-item{
-    font-size: 115%; /*Modification de la taille des autres onglets*/
-    color : rgb(92, 9, 9);
-}
-
 
 .nav-link:hover{
-    color : black !important; /*Onglet devient jaune lorsque le curseur pointe l'onglet*/
+    color : yellow !important; /*Onglet devient jaune lorsque le curseur pointe l'onglet*/
     font-size: 150%; /*Modification de la taille des autres onglet lorsque le curseur pointe sur l'onglet */
-}
-
-.nav-link_ic:hover{
-    font-size: 150%; /*Modification de la taille de l'onglet de connexion et d'inscription lorsque le curseur pointe sur l'onglet */
 }
 
 .navbar-brand{
     font-size:200%;  /*Modification de la taille du nom mis sur la navbarre */
-    color : rgb(92, 9, 9);
+    color:white;
 }
 
-/*.navbar-brand img{
-    height: 20%;
-    width: 40%;
-    margin:0;
-}*/
+.navbar-brand{
+    font-size:200%;  /*Modification de la taille du nom mis sur la navbarre */
+    color:white;
+}
 
 *{
     margin:0;
@@ -52,6 +54,7 @@
 
 body{
     background: #fcfcfc;
+    color:black;
 }
 /*footer{
     display : table-row;
