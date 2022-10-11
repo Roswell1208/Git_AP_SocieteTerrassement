@@ -8,28 +8,35 @@
         
         {% if id == unePresta.id %}
 
-            {% if app.user.email != "loreinthierry@gmail.com" %}
+            <div class="detailPrestaBody">
+                <h1>{{unePresta.titre}}</h1>
 
-                <div class="detailPrestaBody">
-                    <h1>{{unePresta.titre}}</h1>
+                <p>{{unePresta.getDescriPresta()}}</p>
+                <p>{{unePresta.getTarif()}} €/m2</p>
 
-                    <p>{{unePresta.getDescriPresta()}}</p>
-                    <p>{{unePresta.getTarif()}} €/m2</p>
+                <img src="../{{unePresta.lienImg}}">
+                
+            </div>
 
-                    <img src="../{{unePresta.lienImg}}">
+            {% if app.user.email is defined and app.user.email == 'loreinthierry@gmail.com' %}
 
-                </div>
+                <div class="buttonsAdmin">
 
-            {% else %}
+                    <table>
+                        <tr>
+                            <td>
+                                <a href="#">
+                                    <input type="submit" value="Modifier">
+                                </a>
+                            </td>
 
-                <div class="detailPrestaBody">
-                    <h1>{{unePresta.titre}}</h1>
-
-                    <p>{{unePresta.getDescriPresta()}}</p>
-                    <p>{{unePresta.getTarif()}} €/m2</p>
-
-                    <img src="../{{unePresta.lienImg}}">
-                    <p>{{app.user.email}}</p>
+                            <td>
+                                <a href="#">
+                                    <input type="submit" value="Supprimer">
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
 
                 </div>
 
@@ -40,5 +47,3 @@
     {% endfor %}
 
 {% endblock %}
-
-
