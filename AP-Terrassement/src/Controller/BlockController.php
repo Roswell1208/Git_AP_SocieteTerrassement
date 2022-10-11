@@ -2,17 +2,18 @@
 
 namespace App\Controller;
 
-use App\Entity\Prestation;
 use App\Entity\Avis;
-use App\Entity\Contact;
-use App\Entity\Presentation;
 use App\Form\AvisType;
+use App\Entity\Contact;
 use App\Form\ContactType;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Prestation;
+use App\Entity\Presentation;
+use App\Form\ModifPresentType;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Request;
-use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
 class BlockController extends AbstractController
@@ -106,16 +107,6 @@ class BlockController extends AbstractController
     }
 
     /**
-     * @Route("Connexion", name="Connexion")
-     */
-    public function Connexion(): Response
-    {
-        return $this->render('block/Connexion.html.twig', [
-            'controller_name' => 'BlockController',
-        ]);
-    }
-
-    /**
      * @Route("presentation", name="presentation")
      */
     public function presentation(): Response
@@ -127,6 +118,44 @@ class BlockController extends AbstractController
             'controller_name' => 'BlockController',
 
             'listePresentations' => $presentations
+        ]);
+    }
+    
+    /**
+     * @Route("ModifPresent", name="ModifPresent")
+     */
+    public function ModifPresent(Request $request, EntityManagerInterface $entityManager): Response
+    {
+        $modifPres = new presentation();
+        $form = $this->createForm(ModifPresentType::class, $modifPres);
+        $form->handleRequest($request);
+
+        
+        if ($form->isSubmitted() && $form->isValid()){
+            #$modifPres -> setDescription();
+            #$modifPres -> setLienImg();
+            $entityManager->persist($modifPres);
+            $entityManager->flush();
+        }
+
+
+        return $this->render('block/ModifPresentation.html.twig', [
+            'controller_name' => 'BlockController',
+            'form' => $form->createView()
+        ]);
+    }
+
+    /**
+     * @Route("listContact", name="listContact")
+     */
+    public function listContact(): Response
+    {
+        $repoContact = $this->getDoctrine()->getRepository(Contact::class);
+        $contact = $repoContact->findAll();
+
+        return $this->render('block/listContact.html.twig', [
+            'controller_name' => 'BlockController',
+            'listContact' => $contact
         ]);
     }
 }
