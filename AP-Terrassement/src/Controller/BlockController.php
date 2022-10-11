@@ -3,9 +3,17 @@
 namespace App\Controller;
 
 use App\Entity\Prestation;
+use App\Entity\Avis;
+use App\Entity\Contact;
+use App\Entity\Presentation;
+use App\Form\AvisType;
+use App\Form\ContactType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
+use Doctrine\ORM\EntityManagerInterface;
+
 
 class BlockController extends AbstractController
 {
@@ -14,8 +22,12 @@ class BlockController extends AbstractController
      */
     public function index(): Response
     {
+        $repoAvis = $this->getDoctrine()->getRepository(Avis::class);
+        $avis = $repoAvis->findAll();
+
         return $this->render('block/index.html.twig', [
             'controller_name' => 'BlockController',
+            'listeAvis' => $avis
         ]);
     }
 
@@ -49,13 +61,47 @@ class BlockController extends AbstractController
         ]);
     }
 
-        /**
+    /**
+     * @Route("Avis", name="Avis")
+     */
+    public function Avis(Request $request, EntityManagerInterface $entityManager): Response
+    {
+        $avis = new Avis();
+        $form = $this->createForm(AvisType::class, $avis);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()){
+            $avis -> setDate(new \DateTime('@'.strtotime('now')));
+            $entityManager->persist($avis);
+            $entityManager->flush();
+        }
+
+
+        return $this->render('block/Avis.html.twig', [
+            'controller_name' => 'BlockController',
+            'form' => $form->createView()
+        ]);
+    }
+
+    /**
      * @Route("Contact", name="Contact")
      */
-    public function Contact(): Response
+    public function Contact(Request $request, EntityManagerInterface $entityManager): Response
     {
+        $contact = new Contact();
+        $form = $this->createForm(ContactType::class, $contact);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()){
+            $contact -> setDate(new \DateTime('@'.strtotime('now')));
+            $entityManager->persist($contact);
+            $entityManager->flush();
+        }
+
+
         return $this->render('block/Contact.html.twig', [
             'controller_name' => 'BlockController',
+            'form' => $form->createView()
         ]);
     }
 
@@ -66,6 +112,21 @@ class BlockController extends AbstractController
     {
         return $this->render('block/Connexion.html.twig', [
             'controller_name' => 'BlockController',
+        ]);
+    }
+
+    /**
+     * @Route("presentation", name="presentation")
+     */
+    public function presentation(): Response
+    {
+        $repoPresentation = $this->getDoctrine()->getRepository(Presentation::class);
+        $presentations = $repoPresentation->findAll();
+
+        return $this->render('block/presentation.html.twig', [
+            'controller_name' => 'BlockController',
+
+            'listePresentations' => $presentations
         ]);
     }
 }

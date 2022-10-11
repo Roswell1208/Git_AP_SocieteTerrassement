@@ -12,7 +12,7 @@
 }*/
 
 body{
-    background: #868686;
+    background-color:  rgb(132, 134, 135);
 }
 #container{
     width:100%;
@@ -31,8 +31,7 @@ form {
 #container h1{
     margin-left: auto;
     margin-right: auto;
-    width: 38%;
-    /*margin: 0 auto;*/
+    text-align: center;
     padding-bottom: 10px;
 }
 
@@ -48,7 +47,8 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 input[type=submit] {
-    background-color: #868686;
+    /*background-color: rgb(5, 61, 12);*/
+    background-color:  rgb(34, 125, 185);
     color: white;
     padding: 14px 20px;
     margin: 8px 0;

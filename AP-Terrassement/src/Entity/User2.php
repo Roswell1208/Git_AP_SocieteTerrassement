@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\AvisRepository;
+use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=AvisRepository::class)
+ * @ORM\Entity(repositoryClass=UserRepository::class)
  */
-class Avis
+class User2
 {
     /**
      * @ORM\Id
@@ -16,11 +16,6 @@ class Avis
      * @ORM\Column(type="integer")
      */
     private $id;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $descri_avis;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -33,25 +28,23 @@ class Avis
     private $prenom;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="string", length=255)
      */
-    private $date;
+    private $adresse_mail;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $mdp;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $statut;
 
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getDescriAvis(): ?string
-    {
-        return $this->descri_avis;
-    }
-
-    public function setDescriAvis(string $descri_avis): self
-    {
-        $this->descri_avis = $descri_avis;
-
-        return $this;
     }
 
     public function getNom(): ?string
@@ -78,14 +71,38 @@ class Avis
         return $this;
     }
 
-    public function getDate(): ?\DateTimeInterface
+    public function getAdresseMail(): ?string
     {
-        return $this->date;
+        return $this->adresse_mail;
     }
 
-    public function setDate(\DateTimeInterface $date): self
+    public function setAdresseMail(string $adresse_mail): self
     {
-        $this->date = $date;
+        $this->adresse_mail = $adresse_mail;
+
+        return $this;
+    }
+
+    public function getMdp(): ?string
+    {
+        return $this->mdp;
+    }
+
+    public function setMdp(string $mdp): self
+    {
+        $this->mdp = $mdp;
+
+        return $this;
+    }
+
+    public function getStatut(): ?int
+    {
+        return $this->statut;
+    }
+
+    public function setStatut(int $statut): self
+    {
+        $this->statut = $statut;
 
         return $this;
     }
