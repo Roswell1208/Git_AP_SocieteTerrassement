@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Prestation;
 use App\Entity\Avis;
 use App\Entity\Contact;
+use App\Entity\Presentation;
 use App\Form\AvisType;
 use App\Form\ContactType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -111,6 +112,21 @@ class BlockController extends AbstractController
     {
         return $this->render('block/Connexion.html.twig', [
             'controller_name' => 'BlockController',
+        ]);
+    }
+
+    /**
+     * @Route("presentation", name="presentation")
+     */
+    public function presentation(): Response
+    {
+        $repoPresentation = $this->getDoctrine()->getRepository(Presentation::class);
+        $presentations = $repoPresentation->findAll();
+
+        return $this->render('block/presentation.html.twig', [
+            'controller_name' => 'BlockController',
+
+            'listePresentations' => $presentations
         ]);
     }
 }
