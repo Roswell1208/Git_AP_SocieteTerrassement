@@ -8,16 +8,32 @@
         
         {% if id == unePresta.id %}
 
-            <div class="detailPrestaBody">
-                <h1>{{unePresta.titre}}</h1>
+            {% if app.user.email != "loreinthierry@gmail.com" %}
 
-                <p>{{unePresta.getDescriPresta()}}</p>
-                <p>{{unePresta.getTarif()}} €/m2</p>
+                <div class="detailPrestaBody">
+                    <h1>{{unePresta.titre}}</h1>
 
-                <img src="../{{unePresta.lienImg}}">
-                <p>{{app.user.email}}</p>
+                    <p>{{unePresta.getDescriPresta()}}</p>
+                    <p>{{unePresta.getTarif()}} €/m2</p>
 
-            </div>
+                    <img src="../{{unePresta.lienImg}}">
+
+                </div>
+
+            {% else %}
+
+                <div class="detailPrestaBody">
+                    <h1>{{unePresta.titre}}</h1>
+
+                    <p>{{unePresta.getDescriPresta()}}</p>
+                    <p>{{unePresta.getTarif()}} €/m2</p>
+
+                    <img src="../{{unePresta.lienImg}}">
+                    <p>{{app.user.email}}</p>
+
+                </div>
+
+            {% endif %}
 
         {% endif %}
 
