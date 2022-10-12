@@ -33,6 +33,26 @@
             </td>
             
         {% endfor %}
+
+        {% if app.user.email is defined and app.user.email == 'loreinthierry@gmail.com' %}
+
+            <tr>
+                <td>
+                    <article class="card">
+                        <header class="card__thumb">
+                            <a href="{{ path('AjoutPresta') }}">
+                            <img src="assets/plus.png">
+                            </a>
+                        </header>
+                        <div class="card__body">
+                            <h2 class="card__title"><a href="{{ path('AjoutPresta') }}">Ajouter une prestation</a></h2>
+                        </div>
+                    </article>
+                </td>
+            </tr>
+
+        {% endif %}
+
     </table>
 
 {% endblock %}

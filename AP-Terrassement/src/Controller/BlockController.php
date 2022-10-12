@@ -11,9 +11,10 @@ use App\Entity\Presentation;
 use App\Form\ModifPresentType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
+use App\Form\AddPrestaType;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
 class BlockController extends AbstractController
@@ -118,6 +119,69 @@ class BlockController extends AbstractController
             'controller_name' => 'BlockController',
 
             'listePresentations' => $presentations
+        ]);
+    }
+
+
+    /**
+     * @Route("/delete/{id}", name = "prestaDelete")
+     * 
+     * @return Response
+     */
+    public function prestaDelete(Prestation $unePresta)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($unePresta);
+        $em->flush();
+
+        
+        return $this->redirectToRoute('listPresta');
+    }
+
+
+    /**
+     * @Route("AjoutPresta", name="AjoutPresta")
+     */
+    public function AddPresta(Request $request, EntityManagerInterface $entityManager): Response
+    {
+        $presta = new Prestation();
+        $form = $this->createForm(AddPrestaType::class, $presta);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()){
+            $entityManager->persist($presta);
+            $entityManager->flush();
+        }
+
+
+        return $this->render('block/AddPresta.html.twig', [
+            'controller_name' => 'BlockController',
+            'form' => $form->createView()
+        ]);
+    }
+
+    /**
+     * @Route("/edit/{id}", name = "prestaEdit")
+     * 
+     * @return Response
+     */
+    public function prestaEdit(Request $request, Prestation $unePresta)
+    {
+        $form = $this->createForm(AddPrestaType::class, $unePresta);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()){
+            $em = $this->getDoctrine()->getManager();
+            $em->flush();
+
+            return $this->redirectToRoute('listPresta');
+        }
+
+        $formView = $form->createView();
+
+        return $this->render('block/EditPresta.html.twig', [
+            'controller_name' => 'BlockController',
+            'form' => $form->createView()
         ]);
     }
     
