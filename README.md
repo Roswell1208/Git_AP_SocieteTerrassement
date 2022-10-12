@@ -1,6 +1,8 @@
 # ***AP - Société de terrassement***
 > Par Vincent Murienne et Hugo Poquet
 
+![](https://media.istockphoto.com/photos/earthworks-with-dramatic-sky-picture-id619403812?k=20&m=619403812&s=612x612&w=0&h=3Q4Ws4-KDrAMNdCF1Kx5lkAg4MR-AjOdqJCZMT7gpdw=)
+
 ## **Contexte de l'AP**
 
 Nous travaillons pour l’agence Comeleon qui propose ses services dans la création de site, application, à l’acquisition de nouveaux clients via les moteurs de recherche et les réseaux sociaux, elle accélère le business sur internet.
@@ -38,9 +40,9 @@ Des règles de nommage seront définies, utilisées et respectées par le groupe
 
 #### Modules
 Les options suivantes seront proposées aux utilisateurs du site : 
-•	Saisie d’un nouveau avis 
-•	Saisie d’un formulaire de contact
-•	Consultation de l’ensemble des pages du site
+* Saisie d’un nouveau avis 
+* Saisie d’un formulaire de contact
+* Consultation de l’ensemble des pages du site
 
 
 ## **TerraBat - Société de terrassement**
@@ -51,31 +53,40 @@ Selon l'ampleur des travaux à réaliser, le terrassement est soit une activité
 
 Exemples de travaux courants de terrassement : aménagement de terrains, réalisation de fondations, creusement, déblai, comblement, enrochement, nivellement de chantiers de construction.
 
-
+![](/AP-Terrassement/public/assets/terraLogo.png)
 
 
 ## Voici les prestations que la société propose :
 
 | Remblai | Déblai | Terrassement Piscine | Terrassement Maison
 | --- | --- | --- | --- |
-| Explication 1 | Explication 2 | Explication 3 | Explication 4 |
-
-
-
-
-> Notre site est accessible à cette adresse :
-![](http://127.0.0.1:8000/)
+| Masse de matière rapportée pour élever un terrain, combler un creux ou combler les vides de l'exploitation minière. | Action de déblayer, d'enlever les décombres pour niveler ou abaisser le sol. | Le terrassement d’une piscine est important car il permet de neutraliser les défauts éventuels du sol, d’empêcher les mouvements de terrain et de prendre les dispositions nécessaires en cas de présence de nappe phréatique. Un terrassement bien fait vous garantit la solidité et la pérennité de votre piscine. | Le terrassement de la maison permet de rendre un terrain favorable non seulement à une construction, mais surtout à une construction robuste et qui ne risque pas de s’effondrer dans les années à venir. |
 
 
 
 ## Fonctionnalités du site
-...
 
+### *Pour l'utilisateur connecté ou non :*
+* Une page d'accueil avec les derniers avis clients
+* Une page de présentation de l'entreprise et sa localisation
+* La liste des prestations proposées par l'entreprise avec la possibilité de cliquer pour consulter le détails de la prestation
+* Une page pour laisser un avis sans avoir besoin d'être connecté
+* Une page pour contacter l'enteprise
+* Une page pour créer son compte
+* Une page pour se connecter à son compte
 
-
+### *Pour l'administrateur du site (accès à toutes les pages utilisateur) :*
+* Possibilité de modifier le contenu de la page de présentation
+* Possibilité d'Ajouter / Modifier / Supprimer une prestation dans la liste des prestations
+* Possibilité de consulter la liste des messages de contact depuis la page Contact
 
 
 ## Comment accéder au site ?
+
+> Notre site est accessible en local, voici donc la procédure à suivre :
+
+* Importer la base de données disponible dans les fichiers (nom de la base de données : "dbterrassement")
+* Lancer un serveur en local pour le lancer
 
 
 
