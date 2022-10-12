@@ -1,19 +1,21 @@
 # TerraBat
 ## Société de terrassement
 
-L'expression « **réalité virtuelle** » (ou multimédia immersif ou réalité simulée par ordinateur) renvoie typiquement à une technologie informatique qui simule la présence physique d'un utilisateur dans un environnement artificiellement généré par des logiciels. La réalité virtuelle crée un environnement avec lequel l'utilisateur peut interagir. La réalité virtuelle reproduit donc artificiellement une expérience sensorielle, qui peut inclure la vue, le toucher, l'ouïe et l'odorat (visuelle, sonore ou haptique).
+Nous réalisons des ouvrages destinés à modifier provisoirement ou définitivement les formes naturelles d'un terrain, en vue de la réalisation de travaux. L'activité consiste à terrasser, remuer et transporter des terres, les amonceler, ou exécuter des fouilles pour constructions diverses, creuser des tranchées pour la voirie et les réseaux divers, les canalisations urbaines, etc.
 
-![](https://imgs.search.brave.com/L3EooqSfIvrmvcw6XWEIsZalod49iU4rPcogWScFZaQ/rs:fit:711:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5R/Y0s0V0xteHhzOG1y/UXNBODByYTNRSGFF/OCZwaWQ9QXBp)
+Selon l'ampleur des travaux à réaliser, le terrassement est soit une activité préparatoire aux travaux dits de bâtiment, soit des travaux spécialisés ou de grande masse, qui précèdent les opérations de génie civil.
 
-> La réalité virtuelle est à ne pas confondre avec la réalité augmentée.
-
-La réalité augmentée ajoute des éléments virtuels dans un environnement réel alors que la réalité virtuelle créé virtuellement un environnement réel ou imaginaire.
-
-![](https://imgs.search.brave.com/4ned_UDtS4J66OA3tpiRMZ2ONBQ4ANUGlUIt1g7j8lw/rs:fit:1170:650:1/g:ce/aHR0cHM6Ly93d3cu/b21uaW5ub3YuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE2/LzA2L2hvbG9sZW5z/LTNkLWNvcGllLTEx/NzB4NjUwLmpwZw)
+Exemples de travaux courants de terrassement : aménagement de terrains, réalisation de fondations, creusement, déblai, comblement, enrochement, nivellement de chantiers de construction.
 
 
-## Différence entre la réalité virtuelle et la réalité augmentée :
 
-| Réalité Virtuelle | Réalité Augmentée |
+> Notre site est accessible à cette adresse :
+![](http://127.0.0.1:8000/)
+
+
+
+## Voici les prestations que nous proposons :
+
+| Presta 1 | Presta 2 |
 | --- | --- |
-| Créé un monde virtuel dans un environnement virtuel | Créé un monde virtuel dans un environnement réel |
+| Explication 1 | Explication 2 |
