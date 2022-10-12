@@ -8,6 +8,7 @@ use App\Entity\Contact;
 use App\Entity\Presentation;
 use App\Form\AvisType;
 use App\Form\ContactType;
+use App\Form\AddPrestaType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -127,6 +128,44 @@ class BlockController extends AbstractController
             'controller_name' => 'BlockController',
 
             'listePresentations' => $presentations
+        ]);
+    }
+
+
+    /**
+     * @Route("/delete/{id}", name = "prestaDelete")
+     * 
+     * @return Response
+     */
+    public function prestaDelete(Prestation $unePresta)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($unePresta);
+        $em->flush();
+
+        
+        return $this->redirectToRoute('listPresta');
+    }
+
+
+    /**
+     * @Route("AjoutPresta", name="AjoutPresta")
+     */
+    public function AddPresta(Request $request, EntityManagerInterface $entityManager): Response
+    {
+        $presta = new Prestation();
+        $form = $this->createForm(AddPrestaType::class, $presta);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()){
+            $entityManager->persist($presta);
+            $entityManager->flush();
+        }
+
+
+        return $this->render('block/AddPresta.html.twig', [
+            'controller_name' => 'BlockController',
+            'form' => $form->createView()
         ]);
     }
 }
