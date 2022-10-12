@@ -169,7 +169,11 @@ body
   margin-left: 200px;
   margin-right: 200px;
 
-  margin-bottom: 150px;
+  margin-bottom: 100px;
+}
+
+.descriPres button{
+  margin-top: 50px;
 }
 
 .localisationPres h1{
