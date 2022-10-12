@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Terrassement{% endblock %}
+
+{% block body %}
+
+    {% for unePresta in prestas %}
+        
+        {% if id == unePresta.id %}
+
+            <div class="detailPrestaBody">
+                <h1>{{unePresta.titre}}</h1>
+
+                <p>{{unePresta.getDescriPresta()}}</p>
+                <p>{{unePresta.getTarif()}} €/m2</p>
+
+                <img src="../{{unePresta.lienImg}}">
+                
+            </div>
+
+            {% if app.user.email is defined and app.user.email == 'loreinthierry@gmail.com' %}
+
+                <div class="buttonsAdmin">
+
+                    <table>
+                        <tr>
+                            <td>
+                                <a href="{{ path('prestaEdit', {'id':unePresta.id}) }}">
+                                    <input type="submit" value="Modifier">
+                                </a>
+                            </td>
+
+                            <td>
+                                <a href="{{ path('prestaDelete', {'id':unePresta.id}) }}">
+                                    <input type="submit" value="Supprimer">
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            {% endif %}
+
+        {% endif %}
+
+    {% endfor %}
+
+{% endblock %}

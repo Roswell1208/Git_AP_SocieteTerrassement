@@ -1,0 +1,182 @@
+/* Pour le titre */
+section
+{
+  /*bottom:500px;*/
+  /*background-color:  rgb(5, 61, 12);*/
+  background-color:  rgb(255, 255, 255);
+}
+.titre{
+    font-family: Courier New, monospace;
+    text-align: center;
+    color : rgb(48, 40, 40);
+    font-size: 350%;
+    margin-top: 50px;
+    margin-bottom: 55px;
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+  
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+
+/* Div générique */
+
+body
+{
+  background-color:  rgb(255, 255, 255);
+}
+.position_base{
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Pour les images */
+
+#conteneur img {
+	position:absolute;
+  border-radius: 5%;
+  border: ridge white;
+  height:400px;
+	width:500px;
+  left:125px;
+  top: 100px;
+}
+
+@keyframes fondu-in-out {
+	0%    { opacity:1; }
+	25%   { opacity:1; }
+	75%   { opacity:0; }
+	100%  { opacity:0; }
+}
+
+#conteneur img.image-de-dessus {
+	animation-name: fondu-in-out;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+	animation-direction: alternate;
+}
+
+/* Pour le texte */
+
+.bio_acc{
+  position:absolute;
+  font-family: serif;
+  font-size: 1.5em;
+  color: white;
+  background: gray;
+  border-radius: 5%;
+  left: 50%;
+  top: 250px;
+}
+
+/*#fond_beton{
+  position:absolute;
+  left: 50%;
+  height:300px;
+	width:900px;
+  top: 100px;
+}*/
+
+#conteneur2 img {
+	position:absolute;
+  border-radius: 5%;
+  border: ridge white;
+  height:400px;
+	width:500px;
+  left:900px;
+  top: 750px;
+}
+
+#conteneur2 img.image-de-dessus {
+	animation-name: fondu-in-out;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+	animation-direction: alternate;
+}
+
+.bio_acc2{
+  position:absolute;
+  font-family: serif;
+  font-size: 1.5em;
+  color: white;
+  background: gray;
+  border-radius: 5%;
+  left: 50px;
+  top: 860px;
+}
+
+/*.btn {
+  background-color: black;
+  margin-left: 50%;
+}*/
+
+
+.ListeDerniersAvis{
+  position:absolute;
+  font-family: serif;
+  font-size: 1.5em;
+  text-align: left;
+  top: 1200px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+
+.ListeDerniersAvis table{
+  
+  border: 1px solid;
+}
+
+.ListContact{
+  position:absolute;
+  font-family: serif;
+  font-size: 1.5em;
+  text-align: left;
+  top: 350px;
+  left: 300px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+
+.ListContact table{
+  
+  border: 1px solid;
+
+  
+}
+
+.date{
+  font-style: italic;
+}
+
+.auteur{
+  color: black;
+  text-decoration: underline;
+}
+
+.descriPres {
+  text-align: center;
+  margin-left: 200px;
+  margin-right: 200px;
+
+  margin-bottom: 100px;
+}
+
+.descriPres button{
+  margin-top: 50px;
+}
+
+.localisationPres h1{
+  text-align: center;
+  margin-bottom: 30px;
+}

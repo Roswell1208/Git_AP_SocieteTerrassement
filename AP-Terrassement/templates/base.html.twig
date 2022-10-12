@@ -1,19 +1,81 @@
 <!DOCTYPE html>
 <html>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" >TerraBat {#<img src="assets/terraLogo.png">#}</a> {#Création du 'titre' de la navbarre#}
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{path('app_block')}}">Accueil {#Création d'un onglet 'Accueil'#}
+                        <span class="visually-hidden">(current)</span> {#L'onglet n'aura pas la même couleur que les autres#}
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{path('presentation')}}">Présentation</a> {#Création d'un onglet 'Présentation'#}
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{path('listPresta')}}">Prestations</a> {#Création d'un onglet 'Prestation'#}
+                    </li>
+
+                    {% if app.user.email is defined and app.user.email == 'loreinthierry@gmail.com' %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{path('listContact')}}">Liste Contact</a> {#Création d'un onglet 'Contact'#}
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{path('Avis')}}">Avis</a> {#Création d'un onglet 'Avis'#}
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{path('Contact')}}">Contact</a> {#Création d'un onglet 'Contact'#}
+                        </li>
+                    {% endif %}
+                </ul>
+                <ul class="navbar-nav justify-content-end">
+
+                    {% if app.user %}
+                        <li class="nav-item">
+                            <a class="nav-link_ic" href="{{path('app_logout')}}">Se déconnecter</a> {#Création d'un onglet de déconnexion#}
+                        </li>
+
+                    {% else %}
+
+                    <li class="nav-item">
+                        <a class="nav-link_ic" href="{{path('app_login')}}">Connexion</a> {#Création d'un onglet 'Connexion'#}
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link_ic" href="{{path('app_register')}}">Créer un compte</a> {#Création d'un onglet d'inscription#}
+                    </li>
+                    {% endif %}
+
+                </ul>
+            </div>
+        </div>
+    </nav>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+        <title>{% block title %}{% endblock %}</title>
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
+        <link href="../css/bootstrap.min .css" rel="stylesheet"> {#Importation du fichier css (tjr dans header)#}
+        <link href="../css/base.css" rel="stylesheet"> {#Importation du fichier css (tjr dans header)#}
     </head>
+    <section>{% block section %}{% endblock %}</section>
     <body>
-        {% block body %}{% endblock %}
+        {% block body %}
+        {% endblock %}
     </body>
+    {#<footer>
+        <div class="footer-content">
+            <h3>TerraBat</h3>
+            <p>Lorem</p>
+            <ul class="socials">
+                <li><a href="#"><i Presentation></i></a></li>
+                <li><a href="{{path('listPresta')}}"><i Prestations></i></a></li>
+                <li><a href="#"><i Avis></i></a></li>
+                <li><a href="{{path('listContact')}}"><i Contact></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p> @Copyright 2022 by TerraBat | Design by <span>Poquet Hugo & Murienne Vincent</span></p>
+        </div>
+    </footer>#}
 </html>
