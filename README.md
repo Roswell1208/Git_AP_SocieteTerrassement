@@ -1,7 +1,7 @@
 # ***AP - Société de terrassement***
 > Par Vincent Murienne et Hugo Poquet
 
-![](https://cdn.pixabay.com/photo/2017/08/04/08/54/crash-2579437_960_720.jpg)
+<img src="https://cdn.pixabay.com/photo/2017/08/04/08/54/crash-2579437_960_720.jpg">
 
 ## **Contexte de l'AP**
 
