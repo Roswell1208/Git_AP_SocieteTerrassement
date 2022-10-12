@@ -16,12 +16,19 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{path('listPresta')}}">Prestations</a> {#Création d'un onglet 'Prestation'#}
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{path('Avis')}}">Avis</a> {#Création d'un onglet 'Avis'#}
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{path('Contact')}}">Contact</a> {#Création d'un onglet 'Contact'#}
-                    </li>
+
+                    {% if app.user.email is defined and app.user.email == 'loreinthierry@gmail.com' %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{path('listContact')}}">ListContact</a> {#Création d'un onglet 'Contact'#}
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{path('Avis')}}">Avis</a> {#Création d'un onglet 'Avis'#}
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{path('Contact')}}">Contact</a> {#Création d'un onglet 'Contact'#}
+                        </li>
+                    {% endif %}
                 </ul>
                 <ul class="navbar-nav justify-content-end">
 
@@ -30,11 +37,6 @@
                             <a class="nav-link_ic" href="{{path('app_logout')}}">Se déconnecter</a> {#Création d'un onglet de déconnexion#}
                         </li>
 
-                        {% if app.user.email == 'loreinthierry@gmail.com' %}
-                        <li class="nav-item">
-                            <a class="nav-link_ic" href="#">Coucou</a> {#Création d'un onglet de déconnexion#}
-                        </li>
-                        {% endif %}
                     {% else %}
 
                     <li class="nav-item">
