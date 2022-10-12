@@ -11,13 +11,10 @@ use App\Entity\Presentation;
 use App\Form\ModifPresentType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
-use App\Form\AvisType;
-use App\Form\ContactType;
 use App\Form\AddPrestaType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
 class BlockController extends AbstractController
@@ -124,7 +121,6 @@ class BlockController extends AbstractController
             'listePresentations' => $presentations
         ]);
     }
-<<<<<<<
 
 
     /**
@@ -188,7 +184,6 @@ class BlockController extends AbstractController
             'form' => $form->createView()
         ]);
     }
-=======
     
     
     /**
@@ -255,7 +250,6 @@ class BlockController extends AbstractController
             'listContact' => $contact
         ]);
     }
->>>>>>>
 }
 
 ?>
