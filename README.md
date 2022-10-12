@@ -1,7 +1,7 @@
 # ***AP - Société de terrassement***
 > Par Vincent Murienne et Hugo Poquet
 
-<img src="https://cdn.pixabay.com/photo/2017/08/04/08/54/crash-2579437_960_720.jpg">
+![](https://media.istockphoto.com/photos/earthworks-with-dramatic-sky-picture-id619403812?k=20&m=619403812&s=612x612&w=0&h=3Q4Ws4-KDrAMNdCF1Kx5lkAg4MR-AjOdqJCZMT7gpdw=)
 
 ## **Contexte de l'AP**
 
@@ -53,6 +53,7 @@ Selon l'ampleur des travaux à réaliser, le terrassement est soit une activité
 
 Exemples de travaux courants de terrassement : aménagement de terrains, réalisation de fondations, creusement, déblai, comblement, enrochement, nivellement de chantiers de construction.
 
+![](/AP-Terrassement/public/assets/terraLogo.png)
 
 
 ## Voici les prestations que la société propose :
