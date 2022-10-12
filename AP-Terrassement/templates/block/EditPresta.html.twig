@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modification d'une prestation{% endblock %}
+{% block body %}
+<link href="css/connexion.css" rel="stylesheet">
+
+{#<div class ='position_base'>
+    <div id='conteneur'>
+        <img src="assets/Logo.png">
+    </div>
+</div>#}
+
+
+    {{ form_start(form) }}
+        {{ "Titre" }}
+        {{ form_widget(form.titre) }}
+   
+        {{ "Description" }}
+        {{ form_widget(form.descri_presta) }}
+
+        {{ "Tarif" }}
+        {{ form_widget(form.tarif) }}
+
+        {{ "Lien image" }}
+        {{ form_widget(form.lien_img) }}
+
+        {{ form_rest(form) }}
+        <button type="submit">Modifier</button>
+    {{ form_end(form) }}
+    
+{% endblock %}

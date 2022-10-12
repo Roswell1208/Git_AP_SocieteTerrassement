@@ -73,17 +73,20 @@ body
   font-family: serif;
   font-size: 1.5em;
   color: white;
+  background: gray;
+  border-radius: 5%;
   left: 50%;
   top: 250px;
 }
 
-#fond_beton{
+/*#fond_beton{
   position:absolute;
   left: 50%;
   height:300px;
 	width:900px;
   top: 100px;
-}
+}*/
+
 #conteneur2 img {
 	position:absolute;
   border-radius: 5%;
@@ -106,8 +109,11 @@ body
   position:absolute;
   font-family: serif;
   font-size: 1.5em;
+  color: white;
+  background: gray;
+  border-radius: 5%;
   left: 50px;
-  top: 900px;
+  top: 860px;
 }
 
 /*.btn {
@@ -131,6 +137,24 @@ body
   border: 1px solid;
 }
 
+.ListContact{
+  position:absolute;
+  font-family: serif;
+  font-size: 1.5em;
+  text-align: left;
+  top: 350px;
+  left: 300px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+
+.ListContact table{
+  
+  border: 1px solid;
+
+  
+}
+
 .date{
   font-style: italic;
 }
@@ -138,4 +162,17 @@ body
 .auteur{
   color: black;
   text-decoration: underline;
+}
+
+.descriPres {
+  text-align: center;
+  margin-left: 200px;
+  margin-right: 200px;
+
+  margin-bottom: 150px;
+}
+
+.localisationPres h1{
+  text-align: center;
+  margin-bottom: 30px;
 }
