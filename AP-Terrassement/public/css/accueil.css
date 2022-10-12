@@ -131,6 +131,22 @@ body
   border: 1px solid;
 }
 
+.ListContact{
+  position:absolute;
+  font-family: serif;
+  font-size: 1.5em;
+  text-align: left;
+  top: 350px;
+  left: 500px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+
+.ListContact table{
+  
+  border: 1px solid;
+}
+
 .date{
   font-style: italic;
 }

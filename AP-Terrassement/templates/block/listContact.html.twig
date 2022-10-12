@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %} {#Nom de l'onglet du site#}
+
+{% block section %} <div class = "titre">Liste des contacts</div> {% endblock %}
+{% block body %}
+
+<link href="css/accueil.css" rel="stylesheet">
+
+    <div class='ListContact'>
+        <h1>Demande Contact</h1>
+
+
+        
+        {% for unContact in listContact %}
+
+            {% set date = unContact.getDate().format('Y-m-d') %}
+            {% set heure = unContact.getDate().format('h:i:s') %}
+
+                <table>
+                    <tr>
+                        <td>
+                            <div class='date'>Le {{ date }} à {{ heure}}</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class='auteur'>Ecrit par {{ unContact.prenom }} {{ unContact.nom }} :</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class='descri'>{{ unContact.getDescriContact()}}</div>
+                        </td>
+                    </tr>
+                </table>
+                </br>
+
+            
+        {% endfor %}
+
+
+    </div>
+{% endblock %}
