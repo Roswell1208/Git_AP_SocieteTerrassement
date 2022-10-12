@@ -1,6 +1,8 @@
 # ***AP - Société de terrassement***
 > Par Vincent Murienne et Hugo Poquet
 
+![](https://cdn.pixabay.com/photo/2017/08/04/08/54/crash-2579437_960_720.jpg)
+
 ## **Contexte de l'AP**
 
 Nous travaillons pour l’agence Comeleon qui propose ses services dans la création de site, application, à l’acquisition de nouveaux clients via les moteurs de recherche et les réseaux sociaux, elle accélère le business sur internet.
@@ -57,15 +59,8 @@ Exemples de travaux courants de terrassement : aménagement de terrains, réalis
 
 | Remblai | Déblai | Terrassement Piscine | Terrassement Maison
 | --- | --- | --- | --- |
-| Explication 1 | Explication 2 | Explication 3 | Explication 4 |
+| Masse de matière rapportée pour élever un terrain, combler un creux ou combler les vides de l'exploitation minière. | Action de déblayer, d'enlever les décombres pour niveler ou abaisser le sol. | Le terrassement d’une piscine est important car il permet de neutraliser les défauts éventuels du sol, d’empêcher les mouvements de terrain et de prendre les dispositions nécessaires en cas de présence de nappe phréatique. Un terrassement bien fait vous garantit la solidité et la pérennité de votre piscine. | Le terrassement de la maison permet de rendre un terrain favorable non seulement à une construction, mais surtout à une construction robuste et qui ne risque pas de s’effondrer dans les années à venir. |
 
-
-
-
-> Notre site est accessible en local, voici donc la procédure à suivre :
-
-* Importer la base de données disponible dans les fichiers (nom de la base de données : "dbterrassement")
-* Lancer un serveur en local pour le lancer
 
 
 ## Fonctionnalités du site
@@ -86,6 +81,11 @@ Exemples de travaux courants de terrassement : aménagement de terrains, réalis
 
 
 ## Comment accéder au site ?
+
+> Notre site est accessible en local, voici donc la procédure à suivre :
+
+* Importer la base de données disponible dans les fichiers (nom de la base de données : "dbterrassement")
+* Lancer un serveur en local pour le lancer
 
 
 
