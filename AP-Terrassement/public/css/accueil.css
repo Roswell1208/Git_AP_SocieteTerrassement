@@ -137,7 +137,7 @@ body
   font-size: 1.5em;
   text-align: left;
   top: 350px;
-  left: 500px;
+  left: 300px;
   margin-left: 50px;
   margin-bottom: 100px;
 }
@@ -145,6 +145,8 @@ body
 .ListContact table{
   
   border: 1px solid;
+
+  
 }
 
 .date{
@@ -154,4 +156,17 @@ body
 .auteur{
   color: black;
   text-decoration: underline;
+}
+
+.descriPres {
+  text-align: center;
+  margin-left: 200px;
+  margin-right: 200px;
+
+  margin-bottom: 150px;
+}
+
+.localisationPres h1{
+  text-align: center;
+  margin-bottom: 30px;
 }
