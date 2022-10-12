@@ -22,7 +22,7 @@
         </div>
 
         {% if app.user.email is defined and app.user.email == 'loreinthierry@gmail.com' %}
-            <form action="{{path('ModifPresent')}}">
+            <form action="{{ path('ModifPresent', {'id':unePres.id}) }}">
                 <button type="submit">Modifier</button>
             </form>
         {% endif %}

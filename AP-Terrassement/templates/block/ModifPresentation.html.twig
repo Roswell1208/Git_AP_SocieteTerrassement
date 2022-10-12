@@ -7,14 +7,19 @@
 <link href="css/connexion.css" rel="stylesheet">
 
     {{ form_start(form) }}
+
+        {{ "Titre" }}
+        {{ form_widget(form.titre) }}
+
         {{ "Description" }}
         {{ form_widget(form.description) }}
 
-        {{ "Lien_img" }}
+        {{ "Lien de l'image" }}
         {{ form_widget(form.lien_img) }}
 
         {{ form_rest(form) }}
         <button type="submit">Envoyer</button>
     {{ form_end(form) }}
+
 
 {% endblock %}

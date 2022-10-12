@@ -12,6 +12,8 @@ class ModifPresentType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
+        
+            ->add('titre')
             ->add('description')
             ->add('lien_img')
         ;
