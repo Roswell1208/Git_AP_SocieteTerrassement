@@ -168,6 +168,31 @@ class BlockController extends AbstractController
             'form' => $form->createView()
         ]);
     }
+
+    /**
+     * @Route("/edit/{id}", name = "prestaEdit")
+     * 
+     * @return Response
+     */
+    public function prestaEdit(Request $request, Prestation $unePresta)
+    {
+        $form = $this->createForm(AddPrestaType::class, $unePresta);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()){
+            $em = $this->getDoctrine()->getManager();
+            $em->flush();
+
+            return $this->redirectToRoute('listPresta');
+        }
+
+        $formView = $form->createView();
+
+        return $this->render('block/EditPresta.html.twig', [
+            'controller_name' => 'BlockController',
+            'form' => $form->createView()
+        ]);
+    }
 }
 
 ?>
