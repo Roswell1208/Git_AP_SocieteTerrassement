@@ -73,17 +73,20 @@ body
   font-family: serif;
   font-size: 1.5em;
   color: white;
+  background: gray;
+  border-radius: 5%;
   left: 50%;
   top: 250px;
 }
 
-#fond_beton{
+/*#fond_beton{
   position:absolute;
   left: 50%;
   height:300px;
 	width:900px;
   top: 100px;
-}
+}*/
+
 #conteneur2 img {
 	position:absolute;
   border-radius: 5%;
@@ -106,8 +109,11 @@ body
   position:absolute;
   font-family: serif;
   font-size: 1.5em;
+  color: white;
+  background: gray;
+  border-radius: 5%;
   left: 50px;
-  top: 900px;
+  top: 860px;
 }
 
 /*.btn {
