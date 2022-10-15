@@ -15,24 +15,65 @@
         <img class='image-de-dessus' src="assets/piscine.png">
     </div>
 
-    <div id='fond_beton'>
+    {#<div id='fond_beton'>
         <img src="assets/beton.png">
-    </div>
+    </div>"#}
 
     <div class='bio_acc'>
-        <p>Entreprise familliale, fondé et présidé par Thierry Lorein. </p>
-        <p>Vous pouvez nous retrouver à Vernon ou encore à Mantes-La-Jolie<p>
+        <p>Vous êtes à la recherche d'un professionnel ? 
+        <p>Notre équipe saura satisfaire votre demande ! </p>
+        <p>Demandez dès maintenant votre devis gratuitement ! <p>
     </div>
     <div id='conteneur2'>
-        <img src="assets/maison.png">
-        <img class='image-de-dessus' src="assets/piscine.png">
+        <img src="assets/img1_pt2.png">
+        <img class='image-de-dessus' src="assets/img2_pt2.jpg">
     </div>
     <div class='bio_acc2'>
-        <p>Entreprise familliale, fondé et présidé par Thierry Lorein. </p>
+        <p>TerraBat est une entreprise familliale, fondé et présidé par Thierry Lorein. </p>
         <p>Vous pouvez nous retrouver à Vernon ou encore à Mantes-La-Jolie<p>
+        <p>Faites appel à un artisan terrassier pour un travail soigné</p>
+    </div>
+
+    <div class='ListeDerniersAvis'>
+        <h1>Avis :</h1>
+
+
+        
+        {% for unAvis in listeAvis %}
+
+            {% set date = unAvis.getDate().format('Y-m-d') %}
+            {% set heure = unAvis.getDate().format('h:i:s') %}
+
+                <table>
+                    <tr>
+                        <td>
+                            <div class='date'>Le {{ date }} à {{ heure}}</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class='auteur'>Ecrit par {{ unAvis.prenom }} {{ unAvis.nom }} :</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class='descri'>{{ unAvis.getDescriAvis()}}</div>
+                        </td>
+                    </tr>
+                </table>
+                </br>
+
+            
+        {% endfor %}
+
+
     </div>
 </div>
 {#<button class="btn">Présentation</button>#}
+
+
 
 
 {% endblock %}
