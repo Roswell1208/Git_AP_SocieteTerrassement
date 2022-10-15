@@ -250,6 +250,23 @@ class BlockController extends AbstractController
             'listContact' => $contact
         ]);
     }
+
+
+
+    /**
+     * @Route("/deleteAvis/{id}", name = "avisDelete")
+     * 
+     * @return Response
+     */
+    public function avisDelete(Avis $unAvis)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($unAvis);
+        $em->flush();
+
+        
+        return $this->redirectToRoute('app_block');
+    }
 }
 
 ?>
