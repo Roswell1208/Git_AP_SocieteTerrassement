@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Identite{% endblock %} {#Nom de l'onglet du site#}
+
+{% block body %}
+
+<link href="css/connexion.css" rel="stylesheet">
+
+    {{ form_start(form) }}
+        <p>
+        {{ "Nom du site web" }}
+        {{ form_widget(form.NomSiteWeb) }}</p>
+
+        <p>
+        {{ "Adresse" }}
+        {{ form_widget(form.adresse) }}</p>
+
+        <p>
+        {{ "Propriétaire" }}
+        {{ form_widget(form.proprietaire) }}</p>
+        
+        <p>
+        {{ "Responsable de publication" }}
+        {{ form_widget(form.responsablePublication) }}</p>
+
+        <p>
+        {{ "Conception et réalisation" }}
+        {{ form_widget(form.conceptionRealisation) }}</p>
+
+        <p>
+        {{ "Animation" }}
+        {{ form_widget(form.animation) }}</p>
+
+        <p>
+        {{ "Hébergement" }}
+        {{ form_widget(form.hebergement) }}</p>
+
+        {{ form_rest(form) }}
+        <button type="submit">Envoyer</button>
+    {{ form_end(form) }}
+
+
+{% endblock %}

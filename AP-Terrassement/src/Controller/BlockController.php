@@ -16,6 +16,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+use App\Entity\Identite;
+use App\Form\EditIdentiteType;
+
 
 class BlockController extends AbstractController
 {
@@ -266,6 +269,48 @@ class BlockController extends AbstractController
 
         
         return $this->redirectToRoute('app_block');
+    }
+
+
+
+    /**
+     * @Route("/mentionsLegales", name="mentionsLegales")
+     */
+    public function mentionsLegales(): Response
+    {
+        $repoIdentite = $this->getDoctrine()->getRepository(Identite::class);
+        $identite = $repoIdentite->findAll();
+
+        return $this->render('block/MentionsLegales.html.twig', [
+            'controller_name' => 'BlockController',
+            'listIdentite' => $identite
+        ]);
+    }
+
+
+    /**
+     * @Route("/identiteEdit/{id}", name = "identiteEdit")
+     * 
+     * @return Response
+     */
+    public function identiteEdit(Request $request, identite $uneIdentite)
+    {
+        $form = $this->createForm(EditIdentiteType::class, $uneIdentite);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()){
+            $em = $this->getDoctrine()->getManager();
+            $em->flush();
+
+            return $this->redirectToRoute('mentionsLegales');
+        }
+
+        $formView = $form->createView();
+
+        return $this->render('block/EditIdentite.html.twig', [
+            'controller_name' => 'BlockController',
+            'form' => $form->createView()
+        ]);
     }
 }
 

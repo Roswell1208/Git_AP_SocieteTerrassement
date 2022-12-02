@@ -180,3 +180,17 @@ body
   text-align: center;
   margin-bottom: 30px;
 }
+
+
+.identite {
+  border: 1px solid black;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 60px;
+}
+
+.mentionsLegales {
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 60px;
+}
