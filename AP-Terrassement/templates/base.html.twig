@@ -20,10 +20,26 @@
                         <a class="nav-link" href="{{path('mentionsLegales')}}">Mentions légales</a> {#Création d'un onglet 'Mentions légales'#}
                     </li>
 
-                    {% if app.user.email is defined and app.user.email == 'loreinthierry@gmail.com' %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{path('listContact')}}">Liste Contact</a> {#Création d'un onglet 'Contact'#}
-                        </li>
+                    {% if app.user.id is defined %}
+                        {% for role in app.user.roles %}
+                            {% if role == "ROLE_ADMIN" %}
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{path('listContact')}}">Liste Contact</a> {#Création d'un onglet 'Contact'#}
+                                </li>
+
+                            {% else %}
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{path('Avis')}}">Avis</a> {#Création d'un onglet 'Avis'#}
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{path('Contact')}}">Contact</a> {#Création d'un onglet 'Contact'#}
+                                </li>
+
+                            {% endif %}
+                        {% endfor %}
+                            
                     {% else %}
                         <li class="nav-item">
                             <a class="nav-link" href="{{path('Avis')}}">Avis</a> {#Création d'un onglet 'Avis'#}

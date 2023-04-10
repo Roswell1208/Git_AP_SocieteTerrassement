@@ -63,16 +63,20 @@
                         </td>
                     </tr>
 
-                    {% if app.user.email is defined and app.user.email == 'loreinthierry@gmail.com' %}
+                    {% if app.user.id is defined %}
+                        {% for role in app.user.roles %}
+                            {% if role == "ROLE_ADMIN" %}
 
-                        <tr>
-                            <td>
-                                <a href="{{ path('avisDelete', {'id':unAvis.id}) }}">
-                                    <input type="submit" value="Supprimer">
-                                </a>
-                            </td>
-                        </tr>
-
+                                <tr>
+                                    <td>
+                                        <a href="{{ path('avisDelete', {'id':unAvis.id}) }}">
+                                            <input type="submit" value="Supprimer">
+                                        </a>
+                                    </td>
+                                </tr>
+                                
+                            {% endif %}
+                        {% endfor %}
                     {% endif %}
                 </table>
                 </br>

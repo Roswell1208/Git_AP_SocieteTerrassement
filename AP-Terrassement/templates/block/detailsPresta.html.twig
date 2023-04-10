@@ -18,28 +18,32 @@
                 
             </div>
 
-            {% if app.user.email is defined and app.user.email == 'loreinthierry@gmail.com' %}
+            {% if app.user.id is defined %}
+                {% for role in app.user.roles %}
+                    {% if role == "ROLE_ADMIN" %}
 
-                <div class="buttonsAdmin">
+                        <div class="buttonsAdmin">
 
-                    <table>
-                        <tr>
-                            <td>
-                                <a href="{{ path('prestaEdit', {'id':unePresta.id}) }}">
-                                    <input type="submit" value="Modifier">
-                                </a>
-                            </td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <a href="{{ path('prestaEdit', {'id':unePresta.id}) }}">
+                                            <input type="submit" value="Modifier">
+                                        </a>
+                                    </td>
 
-                            <td>
-                                <a href="{{ path('prestaDelete', {'id':unePresta.id}) }}">
-                                    <input type="submit" value="Supprimer">
-                                </a>
-                            </td>
-                        </tr>
-                    </table>
+                                    <td>
+                                        <a href="{{ path('prestaDelete', {'id':unePresta.id}) }}">
+                                            <input type="submit" value="Supprimer">
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
 
-                </div>
+                        </div>
 
+                    {% endif %}
+                {% endfor %}
             {% endif %}
 
         {% endif %}
